@@ -904,7 +904,6 @@ void Database::save(cv::FileStorage &fs,
 void Database::load(const std::string &filename)
 {
   cv::FileStorage fs(filename.c_str(), cv::FileStorage::READ);
-  if(!fs.isOpened()) throw std::string("Could not open file ") + filename;
 
   load(fs);
 }
